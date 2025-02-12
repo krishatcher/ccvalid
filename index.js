@@ -90,6 +90,10 @@ function isValid(ccNum) {
         result = true;
     }
 
+    if (lengthSixteen && result) {
+        result = luhnCheck(ccNum);
+    }
+
     return result;
 }
 
@@ -129,4 +133,51 @@ function setLogos(ccNum) {
         mc.classList.remove("active");
         discover.classList.remove("active");
     }
+}
+
+function luhnCheck(ccNum) {
+    /*
+        logic in this function was implemented based on description
+        on https://dnschecker.org/credit-card-validator.php
+        after the rest of the logic in this file was complete.
+    */
+
+    let isValid = false;
+
+    const checkDigit = parseInt(ccNum.slice(-1), 10);
+
+    let remaining = ccNum.slice(0, -1);
+    let remainingArr = remaining.split("");
+    let remainingRev = remainingArr.reverse();
+
+    numList = [];
+
+    for (let i = 0; i < remainingRev.length; i++) {
+        if (i % 2 != 0) {
+            numList.push(parseInt(remainingRev[i], 10));
+        } else {
+            var digit = remainingRev[i];
+            digit = digit * 2;
+            if (digit > 9) {
+                var digitStr = digit.toString();
+                digit = parseInt(digitStr[0], 10) + parseInt(digitStr[1], 10);
+            }
+
+            numList.push(digit);
+        }
+    }
+
+    var numListSum = 0;
+    numList.forEach(num => numListSum += num)
+
+    numListSum = numListSum * 9;
+
+    let checkSumString = String(numListSum)
+    let checkDigitCalc = checkSumString.slice(-1);
+
+    if (checkDigitCalc == checkDigit) {
+        isValid = true;
+    }
+
+    return isValid
 }
