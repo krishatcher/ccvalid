@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+ <head>
+  <title>Credit Card Number Validator</title>
+  <meta charset='utf-8'>
+  <link rel="stylesheet" href="index.css">
+ </head>
+ <body>
+    <div id="widget">
+        <h1>Credit Card Number Validator</h1>
+        <p>This tool validates that the entered CC number is the correct length,<br/>and provides the card issuer based on the entered number.</p>
+        <form>
+            <label for="ccNumber">Credit Card Number</label>
+            <input type="number" name="ccNumber" id="ccNumber"/>
+            <span class="validation"></span>
+            <button type="submit" class="submit inactive">Submit</button>
+            <button type="button" class="clear">Clear</button>
+        </form>
+        <p class="issuers"><span class="visa"></span><span class="mc"></span><span class="discover"></span></p>
+        <div id="result" class="hidden">
+            <p class="resultText"></p>
+        </div>
+    </div>
+    <script src="index.js"></script>
+ </body>
+</html>
