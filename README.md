@@ -35,3 +35,7 @@ Each credit card company uses a different number format for their credit cards.
 * Discover - 16 digits, starting with 6011 or 65
 
 ## Implementation Information
+
+Functional site can be found at [ccvalid.kristopherhatcher.com](http://ccvalid.kristopherhatcher.com/). _Note that HTTPS is not implemented given the additional complexity and the lack of actual data save/submission logic._
+
+Running locally can be accomplished by simply opening [index.html](index.html) in a browser.
