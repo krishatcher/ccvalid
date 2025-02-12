@@ -4,6 +4,12 @@ This is a technical assessment assignment, part of the hiring process for an unn
 
 There are two sections of this document. The first is the assignment, as provided by the company, included here for reference. The second is information about the implementation of that assignment - including observations, assumptions, and instructions as necessary.
 
+## Assumptions
+
+* "Valid" for the purposes of this assignment simply means that the inputs align with the formats provided and that the number passes an implementation of the [Luhn algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm).
+* No data is sent anywhere, and thus no data is stored anywhere as a part of this application. All validation logic occurs in the user's browser.
+* While the intention is that this code works across a wide range of standards-compliant devices, no testing outside of Chromium-based browsers was completed.
+
 ## Assignment
 
 ### Summary
