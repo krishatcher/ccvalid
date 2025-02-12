@@ -4,6 +4,12 @@ This is a technical assessment assignment, part of the hiring process for an unn
 
 There are two sections of this document. The first is the assignment, as provided by the company, included here for reference. The second is information about the implementation of that assignment - including observations, assumptions, and instructions as necessary.
 
+## Implementation Information
+
+Functional site can be found at [ccvalid.kristopherhatcher.com](http://ccvalid.kristopherhatcher.com/). _Note that HTTPS is not implemented given the additional complexity and the lack of actual data save/submission logic._
+
+Running locally can be accomplished by simply opening [index.html](index.html) in a browser.
+
 ## Assumptions
 
 * "Valid" for the purposes of this assignment simply means that the inputs align with the formats provided and that the number passes an implementation of the [Luhn algorithm](https://en.wikipedia.org/wiki/Luhn_algorithm).
@@ -39,9 +45,3 @@ Each credit card company uses a different number format for their credit cards.
 * Visa - 13 or 16 digits, starting with 4
 * MasterCard - 16 digits, starting with 51 through 55
 * Discover - 16 digits, starting with 6011 or 65
-
-## Implementation Information
-
-Functional site can be found at [ccvalid.kristopherhatcher.com](http://ccvalid.kristopherhatcher.com/). _Note that HTTPS is not implemented given the additional complexity and the lack of actual data save/submission logic._
-
-Running locally can be accomplished by simply opening [index.html](index.html) in a browser.
